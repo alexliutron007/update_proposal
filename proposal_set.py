@@ -106,7 +106,7 @@ def get_proposal_id_list(get_proposal_list_url):
     return proposal_id_list
     
 # Create proposal
-def create_proposal_list(list_proposal):    
+def create_proposal(list_proposal):    
     for i in range(0,len(list_proposal)):
         create_proposal_para = {
             "owner_address" : owner_address,
@@ -135,7 +135,7 @@ def approve_proposal(proposal_id_list):
 
 
 def main():
-    create_proposal_list(list_proposal)
+    create_proposal(list_proposal)
     proposal_id_list = get_proposal_id_list(get_proposal_list_url)
     approve_proposal(proposal_id_list)
 
